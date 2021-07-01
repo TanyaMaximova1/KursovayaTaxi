@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="398.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SampleToAddOrder">
+   <children>
+      <VBox layoutX="4.0" prefHeight="350.0" prefWidth="241.0">
+         <children>
+            <Label text="Адрес отправления" />
+            <TextField fx:id="tbDepAddres" />
+            <Label text="Адрес прибытия" />
+            <TextField fx:id="tbArrAdres" />
+            <Label text="Дата заказа" />
+            <TextField fx:id="tbDateTimeArrival" />
+            <Label text="Номер заказа" />
+            <TextField fx:id="tbOrderNumber" />
+            <Label text="Машина" />
+            <TextField fx:id="tbCarName" />
+            <Button mnemonicParsing="false" onAction="#onOrder" prefHeight="26.0" prefWidth="242.0" text="Добавить" />
+            <Button mnemonicParsing="false" onAction="#onEditOrder" prefHeight="26.0" prefWidth="243.0" text="Редактировать" />
+            <Button mnemonicParsing="false" onAction="#onDeleteOrder" prefHeight="26.0" prefWidth="242.0" text="Удалить" />
+         </children></VBox>
+      <HBox layoutY="370.0" prefHeight="26.0" prefWidth="284.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onEnter" text="Принять" />
+            <Button mnemonicParsing="false" onAction="#onCancel" text="Отменить" />
+         </children>
+      </HBox>
+      <TableView fx:id="orderTable" layoutX="250.0" prefHeight="398.0" prefWidth="502.0">
+        <columns>
+          <TableColumn fx:id="depadresColumn" prefWidth="127.19998168945312" text="Адрес отправления" />
+          <TableColumn fx:id="aradresColumn" prefWidth="113.60003662109375" text="Адрес прибытия" />
+            <TableColumn fx:id="orderdateColumn" prefWidth="82.00003051757812" text="Дата заказа" />
+            <TableColumn fx:id="ordernumberColumn" prefWidth="97.5999755859375" text="Номер заказа" />
+            <TableColumn fx:id="ordercarColumn" prefWidth="82.79998779296875" text="Машина" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
